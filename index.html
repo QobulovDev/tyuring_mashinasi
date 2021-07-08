@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyuning mashinasi</title>
+    <link rel="stylesheet" href="col.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tyuning mashinasida sonlarni qo'shi va ayirish</h1>
+        <div class="lemta">
+            <div class="row">
+                <div class="belgilash"></div>
+                <div class="left" onclick="surish(this)"><h3></h3></div>
+                <div class="vid">
+                    <div class="row">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item" id="n11">0</div>
+                        <div class="item" id="n12">0</div>
+                        <div class="item" id="ish">+</div>
+                        <div class="item" id="n21">0</div>
+                        <div class="item" id="n22">0</div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
+                </div>
+                <div class="right" onclick="surish(this)"><h3></h3></div>
+            </div>
+            <div class="cursor"></div>
+        </div>
+        <div class="qadamlar">
+            <div class="row">
+                <table>
+                <tr>
+                    <th>A/Q</th>
+                    <th>Q0</th>
+                    <th>Q1</th>
+                    <th>Q2</th>
+                    <th>Q3</th>
+                    <th>Q4</th>
+                    <th>Q5</th>
+                    <th>Q6</th>
+                </tr>
+                <tr id="a1">
+                    <th>0</th>
+                    <td>1 <- Q1</td>
+                    <td>0 <- Q1</td>
+                    <td>9 <- Q2</td>
+                    <td>0 -> Q3</td>
+                    <td></td>
+                    <td>0 -> Q5</td>
+                    <td>9 <- Q6</td>
+                </tr>
+                <tr id="a2">
+                    <th>1</th>
+                    <td>2 <- Q1</td>
+                    <td>1 <- Q1</td>
+                    <td>0 -> Q3</td>
+                    <td>1 -> Q3</td>
+                    <td></td>
+                    <td>1 -> Q5</td>
+                    <td>0 * Q6</td>
+                </tr>
+                <tr id="a3">
+                    <th>2</th>
+                    <td>3 <- Q1</td>
+                    <td>2 <- Q1</td>
+                    <td>1 -> Q3</td>
+                    <td>2 -> Q3</td>
+                    <td></td>
+                    <td>2 -> Q5</td>
+                    <td>1 * Q6</td>
+                </tr>
+                <tr id="a4">
+                    <th>3</th>
+                    <td>4 <- Q1</td>
+                    <td>3 <- Q1</td>
+                    <td>2 -> Q3</td>
+                    <td>3 -> Q3</td>
+                    <td></td>
+                    <td>3 -> Q5</td>
+                    <td>2 * Q6</td>
+                </tr>
+                <tr id="a5">
+                    <th>4</th>
+                    <td>5 <- Q1</td>
+                    <td>4 <- Q1</td>
+                    <td>3 -> Q3</td>
+                    <td>4 -> Q3</td>
+                    <td></td>
+                    <td>4 -> Q5</td>
+                    <td>3 * Q6</td>
+                </tr>
+                <tr id="a6">
+                    <th>5</th>
+                    <td>6 <- Q1</td>
+                    <td>5 <- Q1</td>
+                    <td>4 -> Q3</td>
+                    <td>5 -> Q3</td>
+                    <td></td>
+                    <td>5 -> Q5</td>
+                    <td>4 * Q6</td>
+                </tr>
+                <tr id="a7">
+                    <th>6</th>
+                    <td>7 <- Q1</td>
+                    <td>6 <- Q1</td>
+                    <td>5 -> Q3</td>
+                    <td>6 -> Q3</td>
+                    <td></td>
+                    <td>6 -> Q5</td>
+                    <td>5 * Q6</td>
+                </tr>
+                <tr id="a8">
+                    <th>7</th>
+                    <td>8 <- Q1</td>
+                    <td>7 <- Q1</td>
+                    <td>6 -> Q3</td>
+                    <td>7 -> Q3</td>
+                    <td></td>
+                    <td>7 -> Q5</td>
+                    <td>6 * Q6</td>
+                </tr>
+                <tr id="a9">
+                    <th>8</th>
+                    <td>9 <- Q1</td>
+                    <td>8 <- Q1</td>
+                    <td>7 -> Q3</td>
+                    <td>8 -> Q3</td>
+                    <td></td>
+                    <td>8 -> Q5</td>
+                    <td>7 * Q6</td>
+                </tr>
+                <tr id="a10">
+                    <th>9</th>
+                    <td>0 <- Q1</td>
+                    <td>9 <- Q1</td>
+                    <td>8 -> Q3</td>
+                    <td>9 -> Q3</td>
+                    <td>_ -> Q4</td>
+                    <td>9 -> Q5</td>
+                    <td>8 * Q6</td>
+                </tr>
+                <tr id="aish">
+                    <th>+</th>
+                    <td></td>
+                    <td>+ <- Q2</td>
+                    <td></td>
+                    <td>+ -> Q3</td>
+                    <td>_ -> Q5</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="a1">
+                    <th>PROBEL</th>
+                    <td></td>
+                    <td></td>
+                    <td>_ -> Q4</td>
+                    <td>_ -> Q0</td>
+                    <td>_* Q4</td>
+                    <td>_ <- Q6</td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="form .column">
+                <label for="onenum">
+                    <h2>Birinchi son</h2>
+                </label>
+                <div class="infobtn" onclick="info1()" id="inbtn"></div>
+                <input type="number" id="onenum" placeholder="1-son" min="1" max="99" value="1">
+                <label for="ishora">
+                    <h2>Ishora</h2>
+                </label>
+                <input type="text" id="ishora" placeholder="ishora (+,-)">
+                <label for="thunum">
+                    <h2>Ikkinchi son</h2>
+                </label>
+                <input type="number" id="thunum" placeholder="1-son" min="1" max="99" value="1">
+                    <h2>Ishlash tezligi</h2>
+                <select id="vaqt">
+                    <option value="8">Sekin</option>
+                    <option value="6">O'rtacha</option>
+                    <option value="4">Tez</option>
+                </select>
+                <button onclick="joylash()">Joylash</button>
+                <button onclick="start()">Boshlash</button>
+                <div class="info">
+                    <h3>Yordam</h3>
+                    <p>Birinchi son: 1 - 99 gacha son</p>
+                    <p>Ishora : "+" yoki "-" </p>
+                    <p>Ikkinchi son: 1 - 99 gacha son</p>
+                    <p>"Joylash" tugmasi kiritilgan sonlarni lentaga joylaydi</p>
+                    <p>"Boshlash" tugmasi hisoblashni boshlaydi</p>
+                </div>
+            </div>
+            </div>
+            <div class="pause">
+                <h3>Ogohlantirish !!!</h3>
+                <p>Iltimos kuting...</p>
+                <p>Hisoblash to'gamaguncha tugmalarni bosmang !</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

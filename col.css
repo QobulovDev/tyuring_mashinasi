@@ -1,0 +1,20 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.between {
+    justify-content: space-between;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
